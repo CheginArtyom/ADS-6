@@ -16,7 +16,7 @@ T arr[5];
     for (int i = 0; i < 5; i++)
       arr[i].prior = 0;
   }
-  void p(T element) {
+  void push(T element) {
     int i = e;
     for (i; i >= b; i--) {
       if (element.prior > arr[i % size].prior)
@@ -28,7 +28,7 @@ T arr[5];
     e++;
   }
   T& pop() {
-    arr[(begin) % size].prior = 0;
+    arr[(b) % size].prior = 0;
     return arr[(b++) % size];
   }
 };
